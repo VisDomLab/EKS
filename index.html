@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero {
+      padding: 50px;
+      background-color: #f8f9fa;
+    }
+
+    .abstract-section {
+      margin-top: 30px;
+    }
+
+    .tsne-images img {
+      width: 100%;
+      max-width: 500px;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Research Page</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#abstract">Abstract</a></li>
+          <li class="nav-item"><a class="nav-link" href="#visualization">Visualization</a></li>
+          <li class="nav-item"><a class="nav-link" href="#citation">Citation</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero text-center">
+    <h1>Evidential Deep Learning for Pseudolabel Refinement in Source Free Domain Adaptation</h1>
+    <p class="text-muted">Shivangi Rai, Rini Smita Thakur, Kunal Jangid, Vinod K Kurmi</p>
+    <p class="text-muted">Indian Institute of Science Education and Research, Bhopal, India</p>
+    <div class="d-flex justify-content-center">
+      <a href="https://github.com/VisDomLab/EKS" class="btn btn-primary m-2">Paper</a>
+      <!-- <a href="#" class="btn btn-secondary m-2">Supplementary</a> -->
+      <a href="https://github.com/VisDomLab/EKS" class="btn btn-success m-2">Code</a>
+    </div>
+  </header>
+
+  <!-- Abstract Section -->
+  <div id="abstract" class="container abstract-section">
+    <h2>Abstract</h2>
+    <p>
+        Source-free domain adaptation (SFDA) utilizes a pre-trained source model with unlabeled target data. Self-supervised SFDA techniques generate pseudolabels from the pre-trained source model, but these pseudolabels often contain noise due to domain discrepancies between the source and target domains. Traditional self-supervised SFDA techniques rely on deterministic model predictions using the softmax function, leading to unreliable pseudolabels. In this work, we propose to introduce predictive uncertainty and softmax calibration for pseudolabel refinement using evidential deep learning. The Dirichlet prior is placed over the output of the target network to capture uncertainty using evidence with a single forward pass. Furthermore, softmax calibration solves the translation invariance problem to assist in learning with noisy labels. We incorporate a combination of evidential deep learning loss and information maximization loss with calibrated softmax in both prior and non-prior target knowledge SFDA settings. Extensive experimental analysis shows that our method outperforms other state-of-the-art methods on benchmark datasets.
+      <!-- Include the full abstract content here -->
+    </p>
+  </div>
+
+  <!-- Visualization Section
+  <div id="visualization" class="container tsne-images">
+    <h2>t-SNE Visualization</h2>
+    <p>
+      t-SNE feature visualization comparing the vanilla model (without debiasing) and the proposed debias model.
+    </p>
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div>
+        <img src="tsne_before.png" alt="Before Debiasing">
+        <p class="text-center">(a) Before debiasing</p>
+      </div>
+      <div>
+        <img src="tsne_after.png" alt="After Debiasing">
+        <p class="text-center">(a) After debiasing</p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Citation Section -->
+  <div id="citation" class="container mt-4">
+    <h2>BibTeX</h2>
+    <pre>
+@Proceedings{shivangi2024,
+  author    = {Rai, Shivani, and Thakur, Rini Smita, Jangid, Kunal and Kurmi, Vinod},
+  title     = {Evidential Deep Learning for Pseudolabel Refinement in Source Free Domain Adaptation},
+  booktitle = {IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  year      = {2024},
+}
+    </pre>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>Built with ❤️ for showcasing research projects.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
